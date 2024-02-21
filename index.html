@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!--ícono del encriptador-->
+        <img src="img\a.svg" alt="icono-a">
+    </header>
+
+    <main>
+        <div class="zona-encriptado">
+            <div id="cuerpo-encriptador" class="zona-encriptacion">
+                <h1 class="titulo-encriptador">Encriptador</h1>
+                <p class="instruccion">Ingresa el texto que deseas encriptar</p>
+                <form id="encriptador" action="encriptar.php" method="post">
+                    <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Encriptar">
+                    <input type="submit" value="Desencriptar">
+                </form>
+            </div>
+            <div>
+                <div class="retorno-texto">
+                    <h2 class="titulo-texto-retornado">Texto encriptado</h2>
+                    <p class="texto-encriptado">El texto encriptado aparecerá aquí</p>
+                    <input type="submit" value="copiar">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
