@@ -1,3 +1,11 @@
+/*
+text  : #F2F3AE (vainilla
+bottoms hover: #FF521B (giants orange)
+bottoms normal: #EDD382 (flax)
+pale purtple: #F2D7EE
+background: #26619C (lapis Lazuli)
+*/
+
 body{
     background-color: #26619C;
 }
@@ -6,10 +14,44 @@ header img {
     margin-top: 15px;
 }
 
-/*
-text  : #F2F3AE (vainilla
-bottoms hover: #FF521B (giants orange)
-bottoms normal: #EDD382 (flax)
-pale purtple: #F2D7EE
-background: #26619C (lapis Lazuli)
-*/
+.zona-encriptado{
+    display: flex;
+}
+
+#cuerpo-encriptador{
+    flex: 7;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.retorno-texto {
+    flex: 3;
+    margin-right: 15px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zona-encriptado {
+    display: flex;
+    flex-direction: row;
+}
+
+#encriptador {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.but-copiar{
+    align-self: center;
+}
