@@ -15,21 +15,30 @@
     <main>
         <div class="zona-encriptado">
             <div id="cuerpo-encriptador" class="zona-encriptacion">
-                <h1 class="titulo-encriptador">Encriptador</h1>
-                <p class="instruccion">Ingresa el texto que deseas encriptar</p>
                 <form id="encriptador" action="encriptar.php" method="post">
-                    <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
-                    <div class="botones">
-                        <input type="submit" value="Encriptar">
-                        <input type="submit" value="Desencriptar">
+                    <div class="input-container">
+                        <input placeholder="Ingresa el texto que deseas encriptar" class="input-field" type="text">
+                        <label for="input-field" class="input-label">Texto a encriptar</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    <div class="botones" value="Encriptar">
+                        <button type="submit">
+                            Encriptar
+                        </button>
+                        <button type="submit">
+                            Desencriptar
+                        </button>
                     </div>
                 </form>
             </div>
             <div>
                 <div class="retorno-texto">
-                    <h2 class="titulo-texto-retornado">Texto encriptado</h2>
+                    <h1 class="titulo-texto-retornado">Texto encriptado</h1>
+                    <img class="img-search" src="img/Nomads - Search.png" alt="search">
                     <p class="texto-encriptado">El texto encriptado aparecerá aquí</p>
-                    <input class="but-copiar" type="submit" value="copiar">
+                    <button class="but-copiar">
+                        Copiar
+                    </button>
                 </div>
             </div>
         </div>

@@ -14,6 +14,16 @@ header img {
     margin-top: 15px;
 }
 
+h1 {
+    color: #F2F3AE;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+p {
+    color: #F2F3AE;
+}
+
 .zona-encriptado{
     display: flex;
 }
@@ -22,9 +32,11 @@ header img {
     flex: 7;
     margin-right: 10px;
     margin-left: 15px;
+    margin-top: 50px;
 }
 
 .retorno-texto {
+    background-color: rgba(242, 215, 238, 0.3);
     flex: 3;
     margin-right: 15px;
     margin-left: 10px;
@@ -32,6 +44,14 @@ header img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 2%; 
+}
+
+.img-search {
+    width: 200px;
+    height: 200px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .zona-encriptado {
@@ -45,13 +65,111 @@ header img {
     justify-content: space-between;
 }
 
+/* Input container */
+.input-container {
+    position: relative;
+    margin: 20px;
+}
+
+  /* Input field */
+.input-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    color: #F2F3AE;
+}
+
+/* Input label */
+.input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: #F2F3AE;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+/* Muestra el label cuando el usuario está escribiendo en el input field */
+.input-field:not(:placeholder-shown) + .input-label {
+    opacity: 1;
+}
+
+  /* Input highlight */
+.input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #F2D7EE;
+    transition: all 0.3s ease;
+}
+
+  /* Input field:focus styles */
+.input-field:focus + .input-label {
+    top: -20px;
+    font-size: 12px;
+    color: #F2F3AE;
+}
+
+.input-field:focus + .input-label + .input-highlight {
+    width: 100%;
+}
+
 .botones {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 300px;
 }
 
 .but-copiar{
-    align-self: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #EDD382;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #FF521B;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #F2F3AE;
+}
+
+button:hover::before {
+    width: 100%;
 }
