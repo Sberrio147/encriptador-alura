@@ -26,11 +26,13 @@ p {
 
 .zona-encriptado{
     display: flex;
+    display: flex;
+    flex-direction: row;
 }
 
 #cuerpo-encriptador{
     flex: 7;
-    margin-right: 10px;
+    margin-right: 50px;
     margin-left: 15px;
     margin-top: 50px;
 }
@@ -44,7 +46,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 2%; 
+    border-radius: 2%;
 }
 
 .img-search {
@@ -54,10 +56,6 @@ p {
     margin-bottom: 80px;
 }
 
-.zona-encriptado {
-    display: flex;
-    flex-direction: row;
-}
 
 #encriptador {
     display: flex;

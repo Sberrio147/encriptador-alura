@@ -15,17 +15,17 @@
     <main>
         <div class="zona-encriptado">
             <div id="cuerpo-encriptador" class="zona-encriptacion">
-                <form id="encriptador" action="encriptar.php" method="post">
+                <form id="encriptador">
                     <div class="input-container">
-                        <input placeholder="Ingresa el texto que deseas encriptar" class="input-field" type="text">
-                        <label for="input-field" class="input-label">Texto a encriptar</label>
+                        <input id="inputField" placeholder="Ingresa el texto que deseas encriptar" class="input-field" type="text">
+                        <label for="inputField" class="input-label">Texto a encriptar</label>
                         <span class="input-highlight"></span>
                     </div>
                     <div class="botones" value="Encriptar">
-                        <button type="submit">
+                        <button id="encryptButton" class="but-encriptar" onclick="encrypt();" type="button">
                             Encriptar
                         </button>
-                        <button type="submit">
+                        <button id="decryptButton" class="but-desencriptar" onclick="decrypt();" type="button">
                             Desencriptar
                         </button>
                     </div>
@@ -34,8 +34,8 @@
             <div>
                 <div class="retorno-texto">
                     <h1 class="titulo-texto-retornado">Texto encriptado</h1>
-                    <img class="img-search" src="img/Nomads - Search.png" alt="search">
-                    <p class="texto-encriptado">El texto encriptado aparecerá aquí</p>
+                    <img id="imgSearch" class="img-search" src="img/Nomads - Search.png" alt="search">
+                    <p id="encryptedText" class="texto-encriptado">El texto encriptado aparecerá aquí</p>
                     <button class="but-copiar">
                         Copiar
                     </button>
@@ -43,5 +43,8 @@
             </div>
         </div>
     </main>
+    <script src="app.js"></script>
+    <script src="node_modules\crypto-js"></script>
+    <script src="node_modules/crypto-js/aes.js"></script>
 </body>
 </html>
