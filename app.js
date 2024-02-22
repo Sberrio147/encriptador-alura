@@ -5,6 +5,7 @@ let inputField = document.getElementById('inputField');
 let encryptedText = document.getElementById('encryptedText');
 let encryptButton = document.getElementById('encryptButton');
 let decryptButton = document.getElementById('decryptButton');
+let image = document.getElementById('imgSearch');
 
 
 
@@ -18,8 +19,8 @@ window.encrypt = function() {
 
 window.decrypt = function() {
     var ciphertext = encryptedText.textContent;
-    var bytes = CryptoJS.AES.decrypt(ciphertext, '12345');
+    var bytes = CryptoJS.AES.decrypt(ciphertext, '123');
     var decrypted = bytes.toString(CryptoJS.enc.Utf8);
-    inputField.value = decrypted;
+    encryptedText.textContent = decrypted;
     console.log(decrypted);
 }
